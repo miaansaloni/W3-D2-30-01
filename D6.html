@@ -30,6 +30,10 @@
       .myHeading {
         color: #ff00d6;
       }
+
+      .GreenBG {
+        background-color: green;
+      }
     </style>
   </head>
 
@@ -166,7 +170,13 @@
          Scrivi una funzione che renda verde il background di ogni lista non ordinata
         */
 
-      const paintItGreen = function () {};
+      const paintItGreen = function () {
+        const unorderedLists = document.querySelectorAll("ul");
+        for (let i = 0; i < unorderedLists.length; i++) {
+          unorderedLists[i].classList.add("GreenBG");
+        }
+      };
+      paintItGreen();
 
       /* ESERCIZIO 9
          Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
